@@ -1,73 +1,9 @@
-body {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	height: 98vh;
-	background-color: #1B1B1B;
-}
-
-#main {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-	/*aesthetic*/
-	color: white;
-	background: #161616;
-	padding: 10px;
-	height: min-content;
-	width: min-content;
-	border: 1px solid pink;
-}
-
-#main span {
-	height: 5%;
-	width: 100%;
-	padding-bottom: 20px;
-}
-
-#main #slider {
-	display: flex;
-	overflow: hidden;
-	height: 85%;
-	width: 100%;
-}
-
-.slide {
-	flex-shrink: 0;
-	justify-content: center;
-	align-content: center;
-	text-align: center;
-	height: 100%;
-	width: 100%;
-}
-
-#main #slide-wrap {
-	display: flex;
-	justify-content: space-evenly;
-	height: 10%;
-	width: 100%;
-}
-
-.button {
-	border: 1px solid pink;
-	height: 100%;
-	width: 20%;
-}
-
-.button a {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100%;
-}
-
-.button:hover {
-	background-color: pink;
+html {
+    background-color: #1B1B1B;
+    color: pink;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+    text-decoration: none;
+    color: inherit;
 }

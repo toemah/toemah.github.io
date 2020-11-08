@@ -2,63 +2,34 @@
 <html>
 
 <head>
-    <title>toemah's</title>
     <meta charset='utf-8'>
+    <title></title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="./style/main.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="./media/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./media/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./media/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./media/favicon/site.webmanifest">
+    <link rel='stylesheet' href='./style/main.css'>
+    <link rel='stylesheet' href='./style/index.css'>
+    <script src='./script/index.js'></script>
 </head>
 
 <body>
-    <div id="main">
-        <span>welcome to my <b><a href="./index.html">broken page on the internet</a></b></span>
-        <div id="slider">
-            <div class="slide" id="home">
-                <span>here are some of my most used websites :
-                    </br>--
-                    <a href="https://www.youtube.com">youtube</a> /
-                    <a href="https://www.twitter.com">twitter</a> /
-                    <a href="https://www.protonmail.com">protonmail</a> /
-                    <a href="https://www.mail.google.com">gmail</a>
-                    --</span>
-            </div>
-            <div class="slide" id="stuff">
-                <span>this is a video which i think is neat: </br><b><a href="https://youtu.be/n0qIgPIDy00">funny birds
-                            have
-                            a sword fight with their beaks ROFL</a></b></span>
-            </div>
-            <div class="slide" id="rig">
-                <span>
-                    case: nzxt h700 white</br>
-                    motherboard: asus prime x570-p</br>
-                    gpu: gigabyte rtx 2070 super</br>
-                    cpu: amd r5 3600x</br>
-                    ram: corsair 16GB 3200MHz CAS 16</br>
-                    tower cooler: arctic freezer 34 esports</br>
-                    psu: gigabyte 650w 80+ bronze</br>
-                </span></div>
-            <div class="slide" id="other">
-                <span>here's my email: <a href="mailto:toemah@protonmail.com">toemah@protonmail.com</a></span>
-            </div>
-        </div>
-        <div id="slide-wrap">
-            <div class="button">
-                <a href="#home">home</a>
-            </div>
-            <div class="button">
-                <a href="#stuff">stuff</a>
-            </div>
-            <div class="button">
-                <a href="#rig">rig</a>
-            </div>
-            <div class="button">
-                <a href="#other">other</a>
-            </div>
-        </div>
+    <div id='container'>
+        <ul id='menu'>
+            <button class='sidebutton' id='left' type='button'></button>
+            <li><a class='link' href='https://www.twitter.com'><img class='icon'
+                        src='./media/Twitter_Logo_WhiteOnImage.png'></img></a></li>
+            <li><a class='link' href='https://www.youtube.com'><img class='icon'
+                        src='./media/yt_icon_mono_dark.png'></img></a></li>
+            <li><a class='link' href='https://www.protonmail.com'><img class='icon'
+                        src='./media/protonmail-sign-white.png'></img></a></li>
+            <li><a class='link' href='https://www.discord.com/app'><img class='icon'
+                        src='./media/Discord-Logo-White.png'></img></a></li>
+            <li><a class='link' href='https://www.twitch.tv'><img class='icon'
+                        src='./media/TwitchGlitchBlackOps.png'></img></a></li>
+            <button class='sidebutton' id='right' type='button'></button>
+        </ul>
     </div>
+    <span id='footer'>
+        <a href='./pages/1.html'>home</a> - <a href='https://www.github.com/toemah'>github</a>
+    </span>
 </body>
 
 </html>

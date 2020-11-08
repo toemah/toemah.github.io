@@ -1,0 +1,57 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #161616;
+    list-style: none;
+    padding: 0;
+}
+
+.sidebutton {
+    background-color: pink;
+    border: none;
+    width: 5%;
+    padding: 0;
+}
+
+#menu li {
+    display: inline-block;
+    width: 18%;
+}
+
+#menu li a {
+    display: block;
+}
+
+#menu li a:hover {
+    background-color: pink;
+}
+
+#menu img {
+    display: block;
+    width: 100%;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+}

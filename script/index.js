@@ -16,7 +16,7 @@ let sTitle = 'this is literally just a custom homepage for my browser',
     cIcon = document.getElementsByClassName('icon');
 
 window.addEventListener('load', () => {
-    scroll(sTitle);
+    scroll(sTitle + " ");
     let btnLeft = document.getElementById("left"),
         btnRight = document.getElementById('right');
     btnLeft.addEventListener('click', () => update(-1));

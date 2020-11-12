@@ -7,8 +7,21 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='../style/main.css'>
 </head>
-there's nothing there yet because i couldnt be bothered
+
 <body>
+    <p>hi im <h1 id="age"></h1>yo.</p>
 </body>
+<script>
+    let birthday = '2001-12-06';
+
+    window.addEventListener('load', () => {
+        document.getElementById('age').innerHTML = calculateAge(birthday);
+    })
+
+    function calculateAge(birthday) {
+        return Math.trunc((new Date() - new Date(birthday)) / (365 * 24 * 60 * 60 * 1000)); 
+    }
+
+</script>
 
 </html>

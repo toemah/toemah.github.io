@@ -1,0 +1,15 @@
+body {
+    max-width: max-content;
+    margin: 40px auto;
+}
+
+.content {
+    padding: 10px;
+    margin: 0;
+    text-align: justify;
+}
+
+h1, h3 {
+    padding-left: 10px;
+    line-height: 0.3;
+}

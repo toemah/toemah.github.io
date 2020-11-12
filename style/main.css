@@ -3,6 +3,13 @@ html {
     color: pink;
 }
 
+#container {
+    width: 777px;
+    padding: 0;
+    margin: 0;
+    background-color: #161616;
+}
+
 a {
     text-decoration: none;
     color: inherit;

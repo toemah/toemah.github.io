@@ -1,0 +1,22 @@
+#menu ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+#menu li a {
+    display: block;
+}
+
+#menu li a:hover {
+    background-color: pink;
+    color: white;
+}

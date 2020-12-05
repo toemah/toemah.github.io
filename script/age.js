@@ -5,5 +5,8 @@ window.addEventListener('load', () => {
 })
 
 function calculateAge(birthday) {
-    return Math.trunc((new Date() - new Date(birthday)) / (365 * 24 * 60 * 60 * 1000));
+    let today = new Date(),
+        year = today.getFullYear(),
+		yearMs = ((year % 400 === 0 || year % 100 !== 0 && year % 4 === 0) ? 366 : 365) * 24 * 60 * 60 * 1000;
+    return Math.trunc((today - new Date(birthday)) / yearMs);
 }

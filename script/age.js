@@ -1,12 +1,17 @@
 let birthday = '2001-12-06';
 
 window.addEventListener('load', () => {
-    document.getElementById('age').innerHTML = calculateAge(birthday);
+    document.getElementById('age').innerHTML = calculateYears(birthday);
 })
 
-function calculateAge(birthday) {
-    let today = new Date(),
-        year = today.getFullYear(),
-	yearMs = ((year % 400 === 0 || year % 100 !== 0 && year % 4 === 0) ? 366 : 365) * 24 * 60 * 60 * 1000;
-    return Math.trunc((today - new Date(birthday)) / yearMs);
+// function written by skruffl (@skruffl or https://gitlab.com/Skruffl)
+function calculateYears(date) {
+    let now = new Date(),
+	bday = new Date(date),
+	yearsPassed = now.getFullYear() - bday.getFullYear();
+    bday.setFullYear(now.getFullYear());
+    if (bday.getTime() > now.getTime()) {
+        yearsPassed--;
+    }
+    return yearsPassed;
 }

@@ -27,7 +27,7 @@ window.addEventListener('load', () => {
 
 // i spent a good hour looking for a solution online
 // until i remembered my good friend caltrop wrote his own
-// kudos to him: @Caltrop256 - github.com/CaltropUWU
+// kudos to him: @Caltrop256 - github.com/Caltrop256
 function scroll(text) {
     document.title = text;
     setTimeout(() => {

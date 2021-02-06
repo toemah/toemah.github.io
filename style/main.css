@@ -1,0 +1,77 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #151515;
+    color: pink;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#main-container {
+    height: 66.667%;
+    width: 66.667%;
+    background-color: #1B1B1B;
+    padding: 12px;
+    border: 3px solid; 
+    border-color: #111111;
+    border-radius: 12px;
+}
+
+.sub-container {
+    height: 31%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#icon {
+    height: 100%;
+    border-radius: 31%;
+    padding-right: 12px;
+}
+
+#about {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#about div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1px;
+}
+
+#about div strong {
+    width: min-content;
+    background-color: #ff0093;
+    color: white;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#about p {
+    height: 100%;
+    display: inline-block;
+    margin: 0;
+    overflow: auto;
+}
+
+#footer {
+    margin-bottom: 3px;
+    position: fixed;
+    bottom: 0;
+}

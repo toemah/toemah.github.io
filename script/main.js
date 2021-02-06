@@ -13,8 +13,8 @@ let toggle = null,
 			light: "#d3d3d3"
 		},
 		logoSrc: {
-			dark: "media/GitHub-Mark-32px.png",
-			light: "media/GitHub-Mark-Light-32px.png"
+			dark: "media/github_dark.png",
+			light: "media/github_light.png"
 		}
 	};
 

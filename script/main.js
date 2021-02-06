@@ -2,7 +2,7 @@ let toggle = null,
 	palette = {
 		bodyBgdColor: {
 			dark: "#151515",
-			light: "#f9f9f9"
+			light: "#ededed"
 		},
 		mainBgdColor: {
 			dark: "#1b1b1b",
@@ -10,7 +10,7 @@ let toggle = null,
 		},
 		mainBrdColor: {
 			dark: "#111111",
-			light: "#ededed"
+			light: "#d3d3d3"
 		},
 		logoSrc: {
 			dark: "media/GitHub-Mark-32px.png",

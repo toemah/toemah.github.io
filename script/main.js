@@ -85,7 +85,7 @@ function uwuModeActivated() {
 
 function fullView() {
 	if (document.body.lastChild.nodeName.toLowerCase() == 'img') return;
-	let src = icon.getAttribute('src'),
+	let src = this.getAttribute('src'),
 		img = document.createElement('img'),
 		body = document.body;
 	img.setAttribute('src', `${src.substr(0, src.indexOf('.'))}.png`);

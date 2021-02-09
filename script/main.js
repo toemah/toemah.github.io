@@ -84,8 +84,15 @@ function uwuModeActivated() {
 }
 
 function fullView() {
-	let src = icon.getAttribute('src');
-	window.open(`${src.substr(0, src.indexOf('.'))}.png`);
+	if (document.body.lastChild.nodeName.toLowerCase() == 'img') return;
+	let src = icon.getAttribute('src'),
+		img = document.createElement('img'),
+		body = document.body;
+	img.setAttribute('src', `${src.substr(0, src.indexOf('.'))}.png`);
+	img.setAttribute('style', 'height: 77%; box-shadow: 0 0 31px 12px black; position: absolute; z-index: 1;');
+	img.setAttribute('title', 'click me to close!');
+	img.addEventListener('click', () => body.removeChild(body.children.item(body.children.length - 1)));
+	body.appendChild(img);
 }
 
 window.addEventListener('load', () => {

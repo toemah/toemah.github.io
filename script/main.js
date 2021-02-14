@@ -1,5 +1,5 @@
-let icon = null,
-	toggle = null,
+let birthday = '2001-06-12',
+	icon = null,
 	slides = null,
 	slidesSrc = null,
 	palette = {
@@ -117,21 +117,40 @@ function nextSlide() {
 
 function updateSlideshow(n) {
 	slides.forEach(e => {
-		let i = slidesSrc.indexOf(e.getAttribute('src'))+n,
-			index = i >= slidesSrc.length ? 0 : i < 0 ? slidesSrc.length-1 : i;
+		let i = slidesSrc.indexOf(e.getAttribute('src')) + n,
+			index = i >= slidesSrc.length ? 0 : i < 0 ? slidesSrc.length - 1 : i;
 		e.setAttribute('src', slidesSrc[index]);
 	});
 }
 
+/**
+ * @author <https://gitlab.com/skruffl>
+ * @returns years passed since a set date 
+ */
+function calculateYears(date) {
+	let now = new Date();
+	let bday = new Date(date);
+	let yearsPassed = now.getFullYear() - bday.getFullYear();
+	bday.setFullYear(now.getFullYear());
+	if (bday.getTime() > now.getTime()) {
+		yearsPassed--;
+	}
+	return yearsPassed;
+}
+
 window.addEventListener('load', () => {
-	icon = document.getElementById('icon');
-	toggle = document.getElementById('toggle');
-	toggle.addEventListener('click', switchTheme);
+	
+	icon = document.getElementById('icon'); // useful in a bit
+	document.getElementById('age').innerHTML = calculateYears(birthday);
+	document.getElementById('toggle').addEventListener('click', switchTheme);
+
+	/* begin slider set up */
 	slides = Array.from(document.getElementById('slideshow').children);
 	slidesSrc = [];
 	slides.forEach(e => {
 		if (slides.indexOf(e) != Math.floor(slides.length / 2)) {
-			e.style.filter = `blur(${Math.abs(slides.indexOf(e) - (slides.length) / (slides.length / 2))}px)`;
+			let a = slides.length - 1, b = slides.length / 2, c = 3, x = Math.abs(slides.indexOf(e) - Math.floor(b));
+			e.style.filter = `blur(${a * (x ** 2) + b * x + c}px)`; // parabola
 		} else {
 			e.addEventListener('click', fullView);
 		}
@@ -139,9 +158,7 @@ window.addEventListener('load', () => {
 	});
 	document.getElementById('prev').addEventListener('click', prevSlide);
 	document.getElementById('next').addEventListener('click', nextSlide);
-	if (Math.random().toFixed(2) == 0.69) {
-		uwuModeActivated();
-	} else {
-		icon.setAttribute('src', 'media/me.webp');
-	}
+	/* end */
+
+	Math.random().toFixed(2) == 0.69 ? uwuModeActivated() : icon.setAttribute('src', 'media/me.webp'); // :3c
 })

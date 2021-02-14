@@ -17,6 +17,14 @@ a {
     color: inherit;
 }
 
+.title {
+    width: min-content;
+    background-color: #ff0093;
+    color: white;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
 #main-container {
     height: 66.667%;
     width: 66.667%;
@@ -59,14 +67,6 @@ a {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 1px;
-}
-
-#about div strong {
-    width: min-content;
-    background-color: #ff0093;
-    color: white;
-    padding-left: 3px;
-    padding-right: 3px;
 }
 
 #about p {
@@ -119,7 +119,7 @@ a {
 }
 
 .slides {
-    height: 77%;
+    width: 20%;
     padding-right: 12px;
 }
 

@@ -140,6 +140,10 @@ function calculateYears(date) {
 
 window.addEventListener('load', () => {
 	
+	/* daft punk  epilogue */
+	location.replace = "https://www.daftpunk.com"
+	/*     1993 - 2021     */
+
 	icon = document.getElementById('icon'); // useful in a bit
 	document.getElementById('age').innerHTML = calculateYears(birthday);
 	document.getElementById('toggle').addEventListener('click', switchTheme);

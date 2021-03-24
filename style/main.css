@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: "Comic Sans MS";
+    src: url("font/comic-sans-ms/comic.ttf");
+    src: url("font/comic-sans-ms/comicbd.ttf");
+    src: url("font/comic-sans-ms/comicz.ttf");
+    src: url("font/comic-sans-ms/comici.ttf");
+}
+
 html,
 body {
     height: 100%;
@@ -11,19 +19,14 @@ body {
 body {
     color: #fffafa;
     background-color: #151515;
+    font-family: "Comic Sans MS";
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-@font-face {
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-    src: url("font/comic-sans-ms/comic.ttf");
-    src: url("font/comic-sans-ms/comicbd.ttf");
-    src: url("font/comic-sans-ms/comicz.ttf");
-    src: url("font/comic-sans-ms/comici.ttf");
-  }
+
 
 .child {
     display: inline-flex;

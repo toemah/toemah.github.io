@@ -4,12 +4,11 @@
 <head>
     <link rel='stylesheet' type='text/css' media='screen' href='style/main.css'>
     <script src='script/main.js'></script>
+    <iframe src="header.html"
+        onload="this.insertAdjacentHTML('afterend', this.contentDocument.body.innerHTML); this.remove()"></iframe>
 </head>
 
 <body>
-
-    <iframe src="header.html"
-        onload="this.insertAdjacentHTML('afterend', this.contentDocument.body.innerHTML); this.remove()"></iframe>
 
     <div id="container">
         <div class="sub-container">

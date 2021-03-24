@@ -2,66 +2,37 @@
 <html>
 
 <head>
-    <title>welcome to my website</title>
-    <title>their work is over</title>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta property="og:title" content="toemah's dumpster fire">
-    <meta property="og:description" content="what the fuck">
-    <meta property="og:image" content="https://toemah.github.io/media/me.webp">
-    <meta property="og:url" content="https://toemah.github.io/">
-    <link rel="icon" type="image/png" href="media/favicon.png" />
     <link rel='stylesheet' type='text/css' media='screen' href='style/main.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style/toggle.css'>
     <script src='script/main.js'></script>
 </head>
 
 <body>
-    <div id="main-container">
-        <div class="sub-container" id="alpha">
-            <a href="index.html"><img id="icon" src="media/me.webp" title="made by me"></a>
-            <div id="about">
-                <div>
-                    <strong class="title">about</strong>
-                    <label class="switch">
-                        <input id="toggle" type="checkbox">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <p>
-                    <br>
-                    hey im thomas, <strong id="age"></strong> years old at time of writing, and i'm studying computer science, what you're looking at is 99.9% self made! B) 
-                    <br>
-                    i usually go by <em>toemah</em> online, feel free to look me up under that handle but know that my activity on those accounts doesn't reflect my person under professional settings, you'll notice i keep it pretty low anyway. :)
-                    <br>
-                    below you'd see some of my epic programming work if i was really cool but instead it's just some pictures i made in paintdotnet, ie the best image editing software, in my spare time for fun :')
-                    <br>
-                    click on the middle pic to *enhance*
-                </p>
+
+    <iframe src="header.html"
+        onload="this.insertAdjacentHTML('afterend', this.contentDocument.body.innerHTML); this.remove()"></iframe>
+
+    <div id="container">
+        <div class="sub-container">
+            <div class="child top">
+                <strong>about</strong>
+            </div>
+            <div class="child top">
+                <strong>reviews<br>coming soon</strong>
             </div>
         </div>
-        <div class="sub-container" id="beta">
-            <div id=slider>
-                <div id="slideshow">
-                    <img class="slides" src="media/me.webp">
-                    <img class="slides" src="media/different.webp">
-                    <img class="slides" src="media/nice.png">
-                    <img class="slides" src="media/untitled1.webp">
-                    <img class="slides" src="media/untitled2.webp">
-                </div>
-                <button class="slider-button" id="prev">
-                    ◀
-                </button>
-                <button class="slider-button" id="next">
-                    ▶
-                </button>
+        <div class="sub-container">
+            <div class="child bottom">
+                <strong>more<br>coming maybe</strong>
+            </div>
+            <div class="child bottom" id="theme">
+                <img src="media/moon.png" />
             </div>
         </div>
     </div>
-    <a id="footer" href="https://github.com/toemah">
-        <img src="media/github_light.png">
-    </a>
+
+    <iframe src="footer.html"
+        onload="this.insertAdjacentHTML('afterend', this.contentDocument.body.innerHTML); this.remove()"></iframe>
+
 </body>
 
 </html>

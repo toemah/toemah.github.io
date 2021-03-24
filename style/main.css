@@ -5,10 +5,10 @@
 
 @font-face {
     font-family: "Comic Sans MS";
-    src: url("font/comic-sans-ms/comic.ttf");
-    /* src: url("font/comic-sans-ms/comicbd.ttf");
-    src: url("font/comic-sans-ms/comicz.ttf");
-    src: url("font/comic-sans-ms/comici.ttf"); */
+    /* src: url("font/comic-sans-ms/comic.ttf");
+    src: url("font/comic-sans-ms/comicbd.ttf");
+    src: url("font/comic-sans-ms/comicz.ttf"); */
+    src: url("font/comic-sans-ms/comici.ttf");
 }
 
 html,

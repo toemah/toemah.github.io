@@ -17,13 +17,17 @@ body {
     flex-direction: column;
 }
 
+@font-face {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    src: url("comic-sans-ms/comici.ttf");
+  }
+
 .child {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
     font-size: 2.9em;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
     text-align: center;
     background-color: #ff86ac;
     border: 3px solid #ff86ac;

@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
     footer = document.getElementById("#footer");
     document.querySelectorAll(".child").forEach(e => {
         let dom = e;
-        dom.addEventListener("click", e.id ? changeTheme : () => loadHTML(dom), {once: !e.id});
+        dom.addEventListener("click", (e.id == "theme" ? changeTheme : () => loadHTML(dom), { once: true }));
     });
 })
 
@@ -28,11 +28,17 @@ let changeTheme = () => {
 }
 
 let loadHTML = (e) => {
-    e.innerHTML = `<iframe src="${e.innerText}.html"onload="this.insertAdjacentHTML('afterend', this.contentDocument.body.innerHTML); this.remove()"></iframe>`;
+    if (e.id == "about") {
+        let setAge = setInterval(() => {
+            let age = document.querySelector("#age") || null;
+            if (age) {
+                age.innerHTML = calculateYears("2001-12-06");
+                clearInterval(setAge);
+            }
+        }, 1);
+    }
+    e.innerHTML = `<iframe src="${e.id}.html"onload="this.insertAdjacentHTML('afterend', this.contentDocument.body.innerHTML); this.remove()"></iframe>`;
     e.style.backgroundColor = "transparent";
-    setTimeout(() => {
-        document.querySelector("#age").innerHTML = calculateYears("2001-12-06");
-    }, 100);
 }
 
 let calculateYears = (date) => {

@@ -17,10 +17,6 @@ body {
     flex-direction: column;
 }
 
-.sub-container:first-of-type {
-    margin-bottom: 4px;
-}
-
 .child {
     display: inline-flex;
     align-items: center;
@@ -45,11 +41,7 @@ body {
     float: right;
 }
 
-.top:first-child {
-    margin-right: 2px;
-}
-
-.top:last-child {
+#review {
     float: right;
 }
 
@@ -75,13 +67,5 @@ body {
         display: flex;
         width: 98%;
     }
-
-    .top:first-child {
-        margin-right: 0px;
-    }
-
-    .child:first-child {
-        margin-bottom: 4px;
-    }
-
+    
 }

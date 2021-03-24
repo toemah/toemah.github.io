@@ -4,7 +4,8 @@ window.addEventListener("load", () => {
     footer = document.getElementById("#footer");
     document.querySelectorAll(".child").forEach(e => {
         let dom = e;
-        dom.addEventListener("click", (e.id == "theme" ? changeTheme : () => loadHTML(dom), { once: true }));
+        let bool = e.id == "theme";
+        dom.addEventListener("click", bool ? changeTheme : () => loadHTML(dom), { once: !bool });
     });
 })
 
@@ -27,18 +28,27 @@ let changeTheme = () => {
     themeImg.setAttribute("src", "media/" + (themeImg.src.match(/moon/i) ? "sun.png" : "moon.png"))
 }
 
+let fileExists = (str) => {
+    let http = new XMLHttpRequest();
+    http.open("HEAD", `${str}.html`, false);
+    http.send();
+    return http.status != 404;
+}
+
 let loadHTML = (e) => {
-    if (e.id == "about") {
-        let setAge = setInterval(() => {
-            let age = document.querySelector("#age") || null;
-            if (age) {
-                age.innerHTML = calculateYears("2001-12-06");
-                clearInterval(setAge);
-            }
-        }, 1);
+    if (fileExists(e.id)) {
+        if (e.id == "about") {
+            let setAge = setInterval(() => {
+                let age = document.querySelector("#age") || null;
+                if (age) {
+                    age.innerHTML = calculateYears("2001-12-06");
+                    clearInterval(setAge);
+                }
+            }, 1);
+        }
+        e.innerHTML = `<iframe src="${e.id}.html"onload="this.insertAdjacentHTML('afterend', this.contentDocument.body.innerHTML); this.remove()"></iframe>`;
+        e.style.backgroundColor = "transparent";
     }
-    e.innerHTML = `<iframe src="${e.id}.html"onload="this.insertAdjacentHTML('afterend', this.contentDocument.body.innerHTML); this.remove()"></iframe>`;
-    e.style.backgroundColor = "transparent";
 }
 
 let calculateYears = (date) => {

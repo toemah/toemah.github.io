@@ -9,7 +9,7 @@ body {
 }
 
 body {
-    color: #f9f9f9;
+    color: #fffafa;
     background-color: #151515;
     display: flex;
     align-items: center;
@@ -32,16 +32,28 @@ body {
     width: 413px;
 }
 
+.topic {
+    color: #f9f9f9;
+}
+
 .child:hover, .child:active {
     cursor: pointer;
     background-color: pink;
 }
 
-#theme {
-    float: right;
+.child:first-of-type {
+    margin-right: 2px;
+}
+
+.sub-container:first-of-type {
+    margin-bottom: 2px;
 }
 
 #review {
+    float: right;
+}
+
+#theme {
     float: right;
 }
 
@@ -66,6 +78,14 @@ body {
     .child {
         display: flex;
         width: 98%;
+    }
+
+    .child:first-of-type {
+        margin-right: 0px;
+    }
+
+    .child:nth-last-child(n+2) {
+        margin-bottom: 2px;
     }
     
 }

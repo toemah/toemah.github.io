@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
     footer = document.getElementById("#footer");
     document.querySelectorAll(".child").forEach(e => {
         let dom = e;
-        dom.addEventListener("click", e.id ? changeTheme : () => loadHTML(dom), {once: true});
+        dom.addEventListener("click", e.id ? changeTheme : () => loadHTML(dom), {once: !e.id});
     });
 })
 

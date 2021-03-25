@@ -1,0 +1,19 @@
+<body>
+    <style>
+        
+    </style>
+    <script>
+        let setStyle = null;
+        (() => {
+            console.log("func");
+            setStyle = setInterval(() => {
+                let more = document.querySelector("#more") || null;
+                if (more) {
+                    more.classList.add("rotate");
+                    clearInterval(setStyle);
+                }
+            }, 1);
+        })();
+    </script>
+    <span id="more">:^)</span>
+</body>

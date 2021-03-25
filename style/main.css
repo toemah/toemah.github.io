@@ -64,6 +64,17 @@ body {
     float: right;
 }
 
+.rotate {
+    font-size: 5em;
+    animation: spin 9s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 @media screen and (max-width: 830px), screen and (max-height: 830px) {
 
     body {

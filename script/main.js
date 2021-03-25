@@ -35,19 +35,42 @@ let fileExists = (str) => {
     return http.status != 404;
 }
 
+fetchAndDo = (selector, func, arg) => {
+    let fetcher = setInterval(() => {
+        let fetched = document.querySelector(selector) || null;
+        console.log("fetching");
+        if (fetched) {
+            func(fetched, arg);
+            clearInterval(fetcher);
+        }
+    }, 1);
+}
+
+appendYearCount = (dom, strDate) => {
+    console.log(dom);
+    dom.innerHTML = calculateYears(strDate);
+}
+
+addClass = (dom, className) => {
+    console.log(dom);
+    dom.classList.add(className);
+}
+
 let loadHTML = (e) => {
     if (fileExists(e.id)) {
-        if (e.id == "about") {
-            let setAge = setInterval(() => {
-                let age = document.querySelector("#age") || null;
-                if (age) {
-                    age.innerHTML = calculateYears("2001-12-06");
-                    clearInterval(setAge);
-                }
-            }, 1);
+        switch (e.id) {
+            case "about":
+                fetchAndDo("#age", appendYearCount, "2001-12-06");
+                break;
+            case "more":
+                fetchAndDo(`#${e.id}:last-child`, addClass, "rotate");
+                break;
+            default:
+                break;
         }
         e.innerHTML = `<iframe src="${e.id}.html"onload="this.insertAdjacentHTML('afterend', this.contentDocument.body.innerHTML); this.remove()"></iframe>`;
         e.style.backgroundColor = "transparent";
+        e.style.padding = "10px";
     }
 }
 

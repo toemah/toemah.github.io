@@ -14,96 +14,52 @@ body {
 }
 
 body {
-    color: #fffafa;
+    color: #ffc0cb;
     background-color: #151515;
     font-family: "Comic Sans MS", "Comic Sans", "cms", cursive;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
+#main-container {
+    width: 777px;
+    text-align: justify;
+}
 
+h1 {
+    color: #fd6c9e;
+}
 
-.child {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    font-size: 2.9em;
+#social ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#social li {
+    width: 15%;
+    display: inline;
     text-align: center;
-    background-color: #ff86ac;
-    border: 3px solid #ff86ac;
-    border-radius: 9px;
-    height: 413px;
-    width: 413px;
 }
 
-.topic {
-    color: #f9f9f9;
+#social a {
+    display: block;
+    color: #fffafa;
+    background-color: #fd6c9e;
 }
 
-.child:hover, .child:active {
-    cursor: pointer;
-    background-color: pink;
+ul {
+    list-style-type: none;
 }
 
-.child:first-of-type {
-    margin-right: 2px;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-.sub-container:first-of-type {
-    margin-bottom: 2px;
-}
-
-#socials {
-    float: right;
-}
-
-#theme {
-    float: right;
-}
-
-.rotate {
-    font-size: 5em;
-    animation: spin 9s linear infinite;
-}
-
-@keyframes spin {
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@media screen and (max-width: 830px), screen and (max-height: 830px) {
-
-    body {
-        display: block;
-    }
-
-    #container {
-        margin-top: 5px;
-        margin-bottom: 1.4em;
-    }
-
-    .sub-container {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .child {
-        display: flex;
+@media screen and (max-width: 777px) {
+    #main-container {
         width: 98%;
     }
-
-    .child:first-of-type {
-        margin-right: 0px;
-    }
-
-    .child:nth-last-child(n+2) {
-        margin-bottom: 2px;
-    }
-    
 }

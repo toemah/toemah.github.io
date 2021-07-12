@@ -24,8 +24,8 @@ let changeTheme = () => {
         themeImg = document.getElementById("theme").querySelector("img");
     document.body.style.backgroundColor = rgb2hex(window.getComputedStyle(document.body).color);
     document.body.style.color = clr;
-    gitImg.setAttribute("src", "media/" + (gitImg.src.match(/white/i) ? "GitHub_Logo.png" : "GitHub_Logo_White.png"));
-    themeImg.setAttribute("src", "media/" + (themeImg.src.match(/moon/i) ? "sun.png" : "moon.png"))
+    gitImg.setAttribute("src", "media/legacy/" + (gitImg.src.match(/white/i) ? "GitHub_Logo.png" : "GitHub_Logo_White.png"));
+    themeImg.setAttribute("src", "media/legacy/" + (themeImg.src.match(/moon/i) ? "sun.png" : "moon.png"))
 }
 
 let fileExists = (str) => {

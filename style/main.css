@@ -62,6 +62,7 @@ hr {
     border: 1px solid #d2d2cf;
     border-radius: 10px;
     padding: 10px;
+    background-color: #fffafa;
 }
 
 #about-section {
@@ -93,11 +94,14 @@ hr {
     content: ",";
 }
 
+.logo {
+    max-width: 300px;
+}
+
 .project {
     min-height: 400px;
     display: flex;
     flex-direction: column;
-    background-color: #fffafa;
 }
 
 .content {

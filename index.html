@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>toemah's</title>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta content="canvas" property="og:title">
+    <meta content="hilariously bad html canvas" property="og:description">
+    <meta content="https://toemah.github.io/canvas/index.html" property="og:url">
+    <meta content="https://toemah.github.io/media/icon.webp" property="og:image">
+    <link rel="stylesheet" href="style/main.css">
+    <script src='script/main.js' defer></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+    body {
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+    }
+
+    a {
+        color: #ff69b4;
+    }
+
+    a:visited {
+        color: #ff1493;
+    }
+
+    #container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .limit-width {
+        max-width: 800px;
+    }
+
+    .safe-space {
+        margin: 0 10px;
+    }
+
+    .bottom-10 {
+        margin-bottom: 10px;
+    }
+
+    #head {
+        background: linear-gradient(90deg, #fd6c9e, pink);
+        color: #fffafa;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .title {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .title>h3:nth-of-type(2) {
+        text-align: right;
+    }
+
+    .section {
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    #about-section {
+        display: flex;
+        min-height: 200px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #skillset {
+        display: flex;
+    }
+
+    #skillset>h4 {
+        margin: 0;
+    }
+
+    #skillset>ul {
+        list-style: none;
+        padding-left: 1ch;
+        margin: 0;
+    }
+
+    #skillset>ul li {
+        display: inline-block;
+    }
+
+    #skillset>ul li:not(:last-child)::after {
+        content: ",";
+    }
+
+    .project {
+        min-height: 300px;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .content>.image {
+        min-width: 300px;
+        width: 300px;
+        height: 300px;
+        background-size: cover;
+        background-position: top center;
+        border: 1px #fd6c9e solid;
+        box-shadow: inset 0 0 10px 1px pink;
+    }
+
+    .project:nth-child(even)>.content>.image {
+        order: 2;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .description>p {
+        text-align: justify;
+    }
+
+    .source {
+        flex: 1;
+        display: flex;
+    }
+
+    .source>a {
+        align-self: flex-end;
+    }
+
+    .project:nth-child(odd)>.content>.info>.source {
+        justify-content: end;
+    }
+
+    @media screen and (max-width: 700px) {
+        #head>.title {
+            display: block !important;
+        }
+
+        .content {
+            display: block !important;
+        }
+
+        .content>.image {
+            width: 100%;
+            max-width: unset;
+        }
+
+        .project:nth-child(even)>.content>img {
+            order: 1;
+        }
+
+        .source {
+            justify-content: end;
+        }
+    }
+</style>
+
+<body>
+    <div id="container">
+        <div id="head" class="bottom-10">
+            <div class="title limit-width safe-space">
+                <h1 id="name">Thomas Guegan</h1>
+                <h1 id="job">Web developper</h1>
+            </div>
+        </div>
+        <div id="main" class="limit-width safe-space">
+            <div id="about-section" class="section bottom-10">
+                <div>
+                    <h2>About me</h2>
+                    <hr>
+                    <p>
+                        I'm a 21 years old french guy, junior developper with a broad skillset although I've been mostly
+                        dabbling in web technologies.
+                        I've worked on websites and put together a few mobile apps for both Android and iOS devices.
+                        <br>
+                        Day-to-day I'm a big videogame nerd, it's quite certainly the thing I'm the most passionate
+                        about. I
+                        play a ton of them and try my best to discover more. I love engaging in discussions about their
+                        design but also the experience I had.
+                    </p>
+                </div>
+                <div id="skillset">
+                    <h4>Skills:</h4>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JS</li>
+                        <li>PHP</li>
+                        <li>C#</li>
+                        <li>Java</li>
+                        <li>Swift</li>
+                        <li>Flutter</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="project-section" class="section bottom-10">
+                <h2>
+                    Projects
+                </h2>
+                <hr>
+                <div id="musiconator" class="project">
+                    <div class="title">
+                        <h3>Musiconator</h3>
+                        <h3>{ Flutter, Dart }</h3>
+                    </div>
+                    <div class="content">
+                        <div class="image" style="background-image: url(media/musiconator.jpg);"></div>
+                        <!-- <img src="media/musiconator.jpg"> -->
+                        <div class="info">
+                            <div class="description">
+                                <p>
+                                    A jukebox mobile app built using the
+                                    <a href="https://flutter.dev/">Flutter framework (v2.15.1)</a>
+                                    and the <a href="">audioplayers (v0.20.1)</a> and
+                                    <a href="https://pub.dev/packages/audioplayers">file_picker (v4.6.0)</a>
+                                    plugins.
+                                </p>
+                                <h4>features:</h4>
+                                <ul>
+                                    <li>
+                                        Customizable themes (name and sounds)
+                                    </li>
+                                    <li>
+                                        Customizable sounds (audio, name, picture)
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="source">
+                                <a href="https://github.com/toemah/musiconator">source</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="gamer_test" class="project">
+                    <div class="title">
+                        <h3>Gamer Test</h3>
+                        <h3>{ HTML, CSS, JS }</h3>
+                    </div>
+                    <div class="content">
+                        <div class="image" style="background-image: url(media/gamer_test.jpg);"></div>
+                        <!-- <img src="media/gamer_test.jpg"> -->
+                        <div class="info">
+                            <div class="description">
+                                <p>
+                                    My own take on the popular reaction time test.
+                                    <br>
+                                    Try it <a href="https://toemah.github.io/gamer_test/">here</a>.
+                                </p>
+                                <h4>features:</h4>
+                                <ul>
+                                    <li>
+                                        Minimal UI (limited to on-screen prompts)
+                                    </li>
+                                    <li>
+                                        Result in 5 rounds
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="source">
+                                <a href="https://github.com/toemah/gamer_test">source</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="canvas" class="project">
+                    <div class="title">
+                        <h3>CANVAS</h3>
+                        <h3>{ HTML, CSS, JS }</h3>
+                    </div>
+                    <div class="content">
+                        <div class="image" style="background-image: url(media/canvas.jpg);"></div>
+                        <!-- <img src="media/canvas.jpg"> -->
+                        <div class="info">
+                            <div class="description">
+                                <p>
+                                    A canvas made without the
+                                    <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas
+                                        API</a>.
+                                    <br>
+                                    Try it <a href="https://toemah.github.io/canvas/">here</a>.
+                                </p>
+                                <h4>features:</h4>
+                                <ul>
+                                    <li>
+                                        5 Colors
+                                    </li>
+                                    <li>
+                                        2 Brushes
+                                    </li>
+                                    <li>
+                                        Brush size slider
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="source">
+                                <a href="https://github.com/toemah/canvas">source</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="projet_pwebc" class="project">
+                    <div class="title">
+                        <h3>Projet PWEBC</h3>
+                        <h3>{ HTML, CSS, JS, JQuery, Leaflet }</h3>
+                    </div>
+                    <div class="content">
+                        <div class="image" style="background-image: url(media/projet_pwebc.jpg);"></div>
+                        <!-- <img src="media/projet_pwebc.jpg"> -->
+                        <div class="info">
+                            <div class="description">
+                                <p>
+                                    A map you can click on built as an academic assignement, using
+                                    <a href="https://jquery.com/">JQuery</a> and <a
+                                        href="https://leafletjs.com/">Leaflet</a>.
+                                    <br>
+                                    Try it <a href="https://toemah.github.io/Projet-PWEBC/">here</a>.
+                                </p>
+                                <h4>features:</h4>
+                                <ul>
+                                    <li>
+                                        Distance travelled between each points
+                                    </li>
+                                    <li>
+                                        Virtually unlimited hops
+                                    </li>
+                                    <li>
+                                        Undo buttons, draggable for some reason
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="source">
+                                <a href="https://github.com/toemah/Projet-PWEBC">source</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

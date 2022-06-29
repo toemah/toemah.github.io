@@ -20,6 +20,7 @@ a:visited {
 hr {
     color: #d2d2cf;
 }
+
 #container {
     width: 100%;
     display: flex;
@@ -94,8 +95,34 @@ hr {
     content: ",";
 }
 
-.logo {
-    max-width: 300px;
+.edu-table {
+    display: table;
+    height: 100%;
+    border-spacing: 10px;
+}
+
+.edu-row {
+    display: table-row;
+    height: 100%;
+}
+
+.edu-cell {
+    display: table-cell;
+    height: 100%;
+    vertical-align: top;
+}
+
+.edu-image-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 300px;
+}
+
+.edu-logo {
+    flex: 1;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .project {
@@ -149,6 +176,30 @@ hr {
 @media screen and (max-width: 700px) {
     #head>.title {
         display: block !important;
+    }
+
+    .edu-table {
+        display: block;
+    }
+
+    .edu-row {
+        display: block;
+    }
+
+    .edu-cell {
+        display: flex;    
+    }
+
+    .edu-image-container {
+        flex-direction: row;
+        gap: 10px;
+        height: 100px;
+        padding: 0 10px 0 10px;
+        flex: 1;
+    }
+
+    .edu-logo {
+        background-position: center;
     }
 
     .content {

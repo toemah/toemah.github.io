@@ -119,6 +119,11 @@ hr {
     width: 300px;
 }
 
+.edu-image-container>a {
+    flex: 1;
+    display: flex;
+}
+
 .edu-logo {
     flex: 1;
     background-size: contain;

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
 :root {
     --seashell: #fff5ee;
@@ -40,6 +41,40 @@ hr {
     color: var(--off-grey);
 }
 
+#controls {
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.control {
+    cursor: pointer;
+    font-size: 1em;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--off-grey);
+}
+
+.control:active {
+    background-color: var(--off-grey);
+}
+
+.control-light {
+    background-color: var(--off-white);
+}
+
+.control-dark {
+    background-color: var(--jet);
+}
+
 #container {
     width: 100%;
     display: flex;
@@ -71,7 +106,7 @@ hr {
 }
 
 .head-dark {
-    background: linear-gradient(90deg, blueviolet, var(--french-pink));    
+    background: linear-gradient(90deg, blueviolet, var(--french-pink));
 }
 
 .title {
@@ -88,16 +123,15 @@ hr {
 .section {
     border-radius: 10px;
     padding: 10px;
+    border: 1px solid var(--off-grey);
 }
 
 .section-light {
     background-color: var(--off-white);
-    border: 1px solid var(--off-grey);
 }
 
 .section-dark {
     background-color: var(--jet);
-    border: 1px solid var(--off-grey);
 }
 
 #about-section {
@@ -162,6 +196,14 @@ hr {
     flex: 1;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.edu-logo-light {
+    filter: drop-shadow(1px 1px 10px var(--eerie-black));
+}
+
+.edu-logo-dark {
+    filter: drop-shadow(1px 1px 10px var(--off-white));
 }
 
 .project {

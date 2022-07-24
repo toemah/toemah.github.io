@@ -11,10 +11,15 @@
     <meta content="https://toemah.github.io/media/icon.webp" property="og:image">
     <link rel="stylesheet" href="style/main.css">
     <script src='script/main.js' defer></script>
+    <script src='script/lang.js' defer></script>
 </head>
 
 <body class="body-light">
     <div id="container">
+        <div id="controls">
+            <i id="theme-button" class="control control-light bi bi-lightbulb-fill"></i>
+            <b id="lang-button" class="control control-light">FR</b>
+        </div>
         <div id="head" class="head-light bottom-10">
             <div class="title limit-width safe-space">
                 <h1 id="name">Thomas Guegan</h1>
@@ -24,7 +29,7 @@
         <div id="main" class="limit-width safe-space">
             <div id="about-section" class="section section-light bottom-10">
                 <div>
-                    <h2>About me</h2>
+                    <h2><i class="bi bi-person-fill"></i><span>About me</span></h2>
                     <hr>
                     <p>
                         I'm a <i id="age"></i> french guy, junior developper with a broad skillset although I've been
@@ -53,7 +58,7 @@
                 </div>
             </div>
             <div id="education-section" class="section section-light bottom-10">
-                <h2>Education</h2>
+                <h2><i class="bi bi-mortarboard-fill"></i> <span>Education</span></h2>
                 <hr>
                 <div id="college">
                     <div class="title">
@@ -65,11 +70,13 @@
                             <div class="edu-cell">
                                 <div class="edu-image-container">
                                     <a href="https://www.iut-orsay.universite-paris-saclay.fr/">
-                                        <div style="background-image: url(media/iut_orsay.webp);" class="edu-logo">
+                                        <div style="background-image: url(media/iut_orsay.webp);"
+                                            class="edu-logo edu-logo-light">
                                         </div>
                                     </a>
                                     <a href="https://www.altisys.fr/">
-                                        <div style="background-image: url(media/altisys.webp);" class="edu-logo">
+                                        <div style="background-image: url(media/altisys.webp);"
+                                            class="edu-logo edu-logo-light">
                                         </div>
                                     </a>
                                 </div>
@@ -98,7 +105,8 @@
                             <div class="edu-cell">
                                 <div class="edu-image-container">
                                     <a href="https://iutparis-seine.u-paris.fr/">
-                                        <div style="background-image: url(media/iut_paris.webp);" class="edu-logo">
+                                        <div style="background-image: url(media/iut_paris.webp);"
+                                            class="edu-logo edu-logo-light">
                                         </div>
                                     </a>
                                 </div>
@@ -122,7 +130,8 @@
                             <div class="edu-cell">
                                 <div class="edu-image-container">
                                     <a href="https://lyc-bascan.fr/">
-                                        <div style="background-image: url(media/louis_bascan.webp);" class="edu-logo">
+                                        <div style="background-image: url(media/louis_bascan.webp);"
+                                            class="edu-logo edu-logo-light">
                                         </div>
                                     </a>
                                 </div>
@@ -138,7 +147,7 @@
                 </div>
             </div>
             <div id="project-section" class="section section-light bottom-10">
-                <h2>Projects</h2>
+                <h2><i class="bi bi-code-slash"></i> <span>Projects</span></h2>
                 <hr>
                 <div id="musiconator" class="project">
                     <div class="title">

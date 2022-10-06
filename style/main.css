@@ -268,7 +268,7 @@ hr {
     }
 
     .edu-cell {
-        display: flex;
+        display: block;
     }
 
     .edu-image-container {
